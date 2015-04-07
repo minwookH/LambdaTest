@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.util.Log;
 import android.widget.TextView;
 
+import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
 /**
@@ -22,6 +24,12 @@ public class MvpActivity extends Activity implements MvpView {
     @Bean(MvpPresenterImpl.class)
     MvpPresenter presenter;
 
+
+    @AfterInject
+    void injection() {
+        presenter.setView(this);
+    }
+
     @Click(R.id.buttonMvp)
     @Background
     void buttonClick() {
@@ -29,6 +37,7 @@ public class MvpActivity extends Activity implements MvpView {
         presenter.networking();
     }
 
+    @UiThread
     @Override
     public void displayText(String text) {
         Log.i("INFO", "MvpActivity displayText");

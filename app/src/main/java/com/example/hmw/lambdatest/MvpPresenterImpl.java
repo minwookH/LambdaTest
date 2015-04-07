@@ -1,7 +1,6 @@
 package com.example.hmw.lambdatest;
 
 import android.util.Log;
-import android.view.View;
 
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
@@ -29,8 +28,8 @@ public class MvpPresenterImpl implements MvpPresenter {
     }
 
     @Override
-    public void setView(View view) {
-
+    public void setView(MvpView view) {
+        this.mvpView = view;
     }
 
 
