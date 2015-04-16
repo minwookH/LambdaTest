@@ -15,7 +15,9 @@
 
         <activity android:name=".AnnotationActivity_"></activity>
 
-        <activity android:name=".MvpActivity_">
+        <activity android:name=".MvpActivity_"></activity>
+
+        <activity android:name="com.example.hmw.invitation.InvitationActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

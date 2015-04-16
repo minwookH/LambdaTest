@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kakao Button"
+        android:textSize="20sp"
+        android:id="@+id/kakaoButton"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Line Button"
+        android:textSize="20sp"
+        android:id="@+id/LineButton"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WeChat Button"
+        android:textSize="20sp"
+        android:id="@+id/WeChatButton"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="phone Button"
+        android:textSize="20sp"
+        android:id="@+id/phoneButton"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="messenger Button"
+        android:textSize="20sp"
+        android:id="@+id/messengerButton"
+        android:layout_margin="20dp" />
+
+</LinearLayout>
