@@ -16,6 +16,25 @@ import org.androidannotations.annotations.EActivity;
 public class InvitationActivity extends Activity {
 
 
+    /*public void initTask() {
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.facebook.samples.hellofacebook",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
+        }
+    }*/
+
     @Click(R.id.kakaoButton)
     public void clickkakao() {
         //com.kakao.talk
@@ -76,17 +95,19 @@ public class InvitationActivity extends Activity {
 
         String EXTRA_PROTOCOL_VERSION = "com.facebook.orca.extra.PROTOCOL_VERSION";
         String EXTRA_APP_ID = "com.facebook.orca.extra.APPLICATION_ID";
-        int PROTOCOL_VERSION = 20150416;
-        String YOUR_APP_ID = "808900692521335";
+        int PROTOCOL_VERSION = 20150314;
+        String YOUR_APP_ID = "432811923545730";
         int SHARE_TO_MESSENGER_REQUEST_CODE = 1;
 
-        String mimeType = "text/plain";
+        //String mimeType = "text/plain";
+        String mimeType = "image/*";
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setPackage("com.facebook.orca");
         intent.setType(mimeType);
         //intent.putExtra(Intent.EXTRA_STREAM, contentUri);
-        intent.putExtra(Intent.EXTRA_TEXT, "AAA");
+        intent.putExtra(Intent.EXTRA_TEXT, "[TEST] ABCEFGHI  www.jandi.com");
+
         intent.putExtra(EXTRA_PROTOCOL_VERSION, PROTOCOL_VERSION);
         intent.putExtra(EXTRA_APP_ID, YOUR_APP_ID);
 
@@ -103,7 +124,9 @@ public class InvitationActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.i("result : ", Integer.toString(resultCode));
-
+        Log.i("result : ", Integer.toString(resultCode));
+        Log.i("result : ", Integer.toString(resultCode));
+        clickPhone();
         //Cursor cursor = managedQuery(data.getData(), null, null, null, null);
         /*Cursor cursor = getContentResolver().query(data.getData(), null, null, null, null);
         String email = null;
