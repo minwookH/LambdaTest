@@ -18,12 +18,23 @@
         <activity android:name=".MvpActivity_"></activity>
 
         <activity android:name="com.example.hmw.invitation.InvitationActivity_">
+
+        </activity>
+
+        <activity
+            android:name="com.example.hmw.com.example.hmw.newSupportLibrary.SupportTestActivity_"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.example.hmw.com.example.hmw.newSupportLibrary.SupportTestTwoActivity_"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
